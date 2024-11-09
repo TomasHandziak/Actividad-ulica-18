@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto con Plugin de jQuery - Carrusel de Imágenes</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .carousel-container {
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="slick-carousel">
+            <div><img src="https://via.placeholder.com/600x400?text=Imagen+1" alt="Imagen 1"></div>
+            <div><img src="https://via.placeholder.com/600x400?text=Imagen+2" alt="Imagen 2"></div>
+            <div><img src="https://via.placeholder.com/600x400?text=Imagen+3" alt="Imagen 3"></div>
+            <div><img src="https://via.placeholder.com/600x400?text=Imagen+4" alt="Imagen 4"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.slick-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true
+            });
+        });
+    </script>
+</body>
+</html>
